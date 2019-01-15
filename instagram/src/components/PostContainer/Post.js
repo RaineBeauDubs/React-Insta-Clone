@@ -16,7 +16,7 @@ function Post(props) {
       </div>
       <CommentSection
         postId={props.insta.imageUrl}
-        comment={props.comment.comments}
+        comments={props.insta.comments}
          />
     </div>
   );

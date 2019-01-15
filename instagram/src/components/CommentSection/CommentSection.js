@@ -30,17 +30,17 @@ class CommentSection extends Component {
     this.setState({ comments, comment: '' });
   }
 
-  componentDidMount() {
-    const id = this.props.postId;
-    if (localStorage.getItem(id)) {
-      this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId))
-      });
-    }
-    else {
-      this.addComments();
-    }
-  }
+  // componentDidMount() {
+  //   const id = this.props.postId;
+  //   if (localStorage.getItem(id)) {
+  //     this.setState({
+  //       comments: JSON.parse(localStorage.getItem(this.props.postId))
+  //     });
+  //   }
+  //   else {
+  //     this.addComments();
+  //   }
+  // }
 
   componentWillUnmount() {
     this.addComments();
@@ -66,24 +66,3 @@ CommentSection.propTypes = {
 
 export default CommentSection;
 
-// import React, { Component } from 'react';
-// import Comment from './Comment';
-// import PropTypes from 'prop-types';
-// import CommentInput from './CommentInput';
-
-
-
-
-
-
-
-
-// function CommentSection(props) {
-//   return (
-//     <div>
-//       {props.comments.map(comment => {
-//         return <Comment comment={comment} />;
-//       })}
-//     </div>
-//   );
-// }
