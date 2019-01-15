@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection.js'
 
 function Post(props) {
   return (
@@ -13,6 +14,10 @@ function Post(props) {
         <p>{props.insta.likes} likes</p>
         <p>Posted {props.insta.timestamp}</p>
       </div>
+      <CommentSection
+        postId={props.insta.imageUrl}
+        comment={props.comment.comments}
+         />
     </div>
   );
 }
