@@ -1,0 +1,45 @@
+h5 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.insta-post {
+  background: lightgrey;
+  width: 600px;
+  align-content: center;
+  margin-bottom: 50px;
+}
+
+.insta-header {
+  display: flex;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.username {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.main-pic {
+  width: 600px;
+}
+
+.insta-bottom {
+  text-align: left;
+}
+
+.icons {
+  margin-top: 4px;
+  margin-left: 9px;
+}
+
+.icon {
+  font-size: 23px;
+}
