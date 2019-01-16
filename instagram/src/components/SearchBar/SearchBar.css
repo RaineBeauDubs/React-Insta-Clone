@@ -1,0 +1,43 @@
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+.left-sb {
+  display: flex;
+}
+
+.camera {
+  margin: 15px 2px 14px 9px;
+  border-right: 1px solid black;
+  padding-right: 13px;
+  font-size: 24px;
+}
+
+.ig-logo {
+  width: 85px;
+  height: 39px;
+  margin-top: 9px;
+  margin-left: 4px;
+  align-items: center;
+}
+
+input {
+  width: 145px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.right-sb {
+  margin-left: 12px;
+  margin-right: 16px;
+}
+
+.search-bar-icons {
+  margin: 21px 0 0 23px;
+}

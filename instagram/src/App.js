@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
 import './App.css';
 
 
@@ -14,8 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostContainer instas={this.state.dummyData} />
-        {/* <CommentSection comment={this.state.comments} /> */}
+        <SearchBar />
+        <div className="start-posts">
+          <PostContainer instas={this.state.dummyData} />
+        </div>
       </div>
     );
   }

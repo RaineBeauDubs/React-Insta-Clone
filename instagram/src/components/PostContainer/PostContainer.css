@@ -8,6 +8,7 @@ h5 {
   width: 600px;
   align-content: center;
   margin-bottom: 50px;
+  margin: auto;
 }
 
 .insta-header {
@@ -42,4 +43,11 @@ h5 {
 
 .icon {
   font-size: 23px;
+}
+
+
+
+
+ul {
+  padding-left: 0;
 }
