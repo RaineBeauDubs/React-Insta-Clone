@@ -8,6 +8,7 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: props.comments,
+      likes: props.likes,
       comment: ''
     };
   }
@@ -30,17 +31,11 @@ class CommentSection extends Component {
     this.setState({ comments, comment: '' });
   }
 
-  // componentDidMount() {
-  //   const id = this.props.postId;
-  //   if (localStorage.getItem(id)) {
-  //     this.setState({
-  //       comments: JSON.parse(localStorage.getItem(this.props.postId))
-  //     });
-  //   }
-  //   else {
-  //     this.addComments();
-  //   }
-  // }
+  incrementLikes = () => {
+    this.setState(prevState => ({
+      likes: ++prevState.likes
+    }))
+  }
 
   componentWillUnmount() {
     this.addComments();
@@ -50,6 +45,13 @@ class CommentSection extends Component {
 
     return (
       <div>
+      <div className="insta-bottom">
+        <div className="icons">
+          <i className="icon far fa-heart" onClick={this.incrementLikes}></i>
+          <i className="icon far fa-comment"></i>
+        </div>
+        <p>{this.state.likes} likes</p>
+      </div>
         {this.state.comments.map((comment, i) => <Comment key={i}
           comment={comment} />)}
         <CommentInput comment={this.state.comments}

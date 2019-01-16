@@ -12,6 +12,19 @@ class App extends Component {
       dummyData : dummyData
     };
   }
+
+  // componentDidMount() {
+  //   const id = this.props.postId;
+  //   if (localStorage.getItem(id)) {
+  //     this.setState({
+  //       comments: JSON.parse(localStorage.getItem(this.props.postId))
+  //     });
+  //   }
+  //   else {
+  //     this.addComments();
+  //   }
+  // }
+
   render() {
     return (
       <div className="App">
