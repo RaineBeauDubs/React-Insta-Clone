@@ -13,17 +13,7 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   const id = this.props.postId;
-  //   if (localStorage.getItem(id)) {
-  //     this.setState({
-  //       comments: JSON.parse(localStorage.getItem(this.props.postId))
-  //     });
-  //   }
-  //   else {
-  //     this.addComments();
-  //   }
-  // }
+
 
   render() {
     return (

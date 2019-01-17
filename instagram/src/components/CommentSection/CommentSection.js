@@ -13,14 +13,12 @@ class CommentSection extends Component {
     };
   }
 
-
-
   commentInput = event => {
     this.setState({ comment: event.target.value })
   }
 
   addComments = () => {
-    localStorage.setItem(this.props.postId)
+    localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments))
   }
 
   addNewComment = event => {
@@ -35,6 +33,18 @@ class CommentSection extends Component {
     this.setState(prevState => ({
       likes: ++prevState.likes
     }))
+  }
+
+  componentDidMount() {
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    }
+    else {
+      this.addComments();
+    }
   }
 
   componentWillUnmount() {
@@ -54,7 +64,7 @@ class CommentSection extends Component {
       </div>
         {this.state.comments.map((comment, i) => <Comment key={i}
           comment={comment} />)}
-        <CommentInput comment={this.state.comments}
+        <CommentInput comment={this.state.comment}
           addNewComment={this.addNewComment}
           commentInput={this.commentInput} />
       </div>
