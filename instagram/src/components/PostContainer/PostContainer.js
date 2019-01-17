@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post';
 
-function PostContainer(props) {
+const PostContainer = props => {
   return (
     <ul>
       {props.instas.map(insta => {
