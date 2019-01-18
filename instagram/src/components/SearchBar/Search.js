@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PostContainer from '../PostContainer/PostContainer.js';
+import SearchBar from './SearchBar.js'
 
-class SearchBox extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      search: ''
-    }
-  }
-  searchInput = (event) => {
-    this.setState({
-      search: event.target.value 
-    })
-    this.props.onChange(event.target.value)
-  }
+function Search(props) {
 
-  render() {
-    return (
-      <div>
+  return (
+    <div>
+      <SearchBar
+        searchString={props.searchString}
+        handleChange={props.handleChange}
+      />
+      <PostContainer
+        searchString={props.searchString}
+        insta={props.dataSearchResults}
+      />
+
+    </div>
+  )
+}
+
+export default Search;
+
+
+
+
+
+
+{/* <div>
         <input type='text' id='filter'
           value={this.state.search}
           onChange={this.searchInput} />
-      </div>
-    )
-  }
-}
-
-export default SearchBox;
+      </div> */}

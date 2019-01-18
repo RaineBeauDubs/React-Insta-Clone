@@ -19,6 +19,7 @@ class CommentSection extends Component {
 
   addComments = () => {
     localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments))
+  
   }
 
   addNewComment = event => {

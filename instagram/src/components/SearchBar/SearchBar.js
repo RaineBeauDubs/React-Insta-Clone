@@ -1,8 +1,8 @@
 import React from 'react';
-import './SearchBar.css'
+import './SearchBar.css';
 
 
-function SearchBar() {
+function SearchBar(props) {
   return (
     <div className="search-bar">
       <div className="left-sb">
@@ -12,10 +12,13 @@ function SearchBar() {
         <img className="ig-logo" src="https://techcrunch.com/wp-content/uploads/2014/06/instagram_topic.png?w=600" alt="instagram" />
       </div>
       <div className="center-sb">
-        <form className="search">
-          <input type="text" name="search" placeholder="Search">
-          </input>
-        </form>
+        <input 
+          name="input-search"
+          value={props.searchString} 
+          onChange={props.handleChange} 
+          type="text"
+          placeholder="Search">
+        </input>
       </div>
       <div className="right-sb">
         <i className="search-bar-icons far fa-compass"></i>
