@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import SearchBar from './components/Search/SearchBar';
 import PostContainer from './components/Post/PostContainer';
 import dummyData from './dummy-data';
+import styled from 'styled-components';
 import './App.css';
+
+const AppWrapper = styled.div `
+  width: 100%;
+  text-align: center;
+  content-align: center;
+  margin: auto;`
 
 class App extends Component {
   constructor() {
@@ -15,11 +22,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <SearchBar />
         <PostContainer 
           instas={this.state.dummyData} />
-      </div>
+      </AppWrapper>
     );
   }
 }

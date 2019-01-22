@@ -5,7 +5,11 @@ const SearchBarDiv = styled.div `
   border-bottom: 1px solid lightgrey;
   display: flex;
   justify-content: space-between;
-  width: 100vw;`
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;`
 
 const LeftSearchBar = styled.div `
   display: flex; `
@@ -33,7 +37,7 @@ const RightSearchBar = styled.div `
 const SearchBarIcons = styled.i `
   margin-right: 18px;`
 
-  
+
 
 function SearchBar() {
   return (
