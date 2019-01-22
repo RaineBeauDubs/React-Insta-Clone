@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import CommentSection from '../Comment/CommentSection';
+
 const PostContainerDiv = styled.div `
   border: 1px solid lightgrey
   width: 500px;
@@ -35,6 +37,7 @@ function Post(props) {
         <PostUsername>{props.insta.username}</PostUsername>
       </PostHeader>
       <PostPic src={props.insta.imageUrl} alt="Post" />
+      <CommentSection comments={props.insta.comments}/>
       <PostTimestamp>{props.insta.timestamp}</PostTimestamp>
     </PostContainerDiv>
   )
