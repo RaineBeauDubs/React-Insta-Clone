@@ -37,7 +37,11 @@ function Post(props) {
         <PostUsername>{props.insta.username}</PostUsername>
       </PostHeader>
       <PostPic src={props.insta.imageUrl} alt="Post" />
-      <CommentSection comments={props.insta.comments}/>
+      <CommentSection 
+        comments={props.insta.comments} 
+        postId={props.insta.imageUrl} 
+        likes={props.insta.likes}
+      />
       <PostTimestamp>{props.insta.timestamp}</PostTimestamp>
     </PostContainerDiv>
   )
