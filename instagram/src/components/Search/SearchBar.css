@@ -1,0 +1,38 @@
+.SearchBarDiv {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.LeftSearchBar {
+  display: flex;  
+}
+
+
+
+.camera {
+  font-size: 23px;
+  margin: 15px 0 0px 7px;;
+  border-right: 1px solid black;
+  padding-right: 5px;
+}
+
+img {
+  width: 100px;
+  height: 45px;
+  margin: 5px;
+}
+
+input {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.RightSearchBar {
+  margin-top: 18px;
+}
+
+.search-bar-icons {
+  margin-right: 18px;
+}

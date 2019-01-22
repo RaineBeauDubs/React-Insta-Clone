@@ -18,7 +18,7 @@ function SearchBar() {
           placeholder="Search">
         </input>
       </div>
-      <div classNAme='RightSearchBar'>
+      <div className='RightSearchBar'>
         <i className="search-bar-icons far fa-compass"></i>
         <i className="search-bar-icons far fa-heart"></i>
         <i className="search-bar-icons far fa-user"></i>
