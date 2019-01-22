@@ -1,29 +1,62 @@
 import React from 'react';
-import './SearchBar.css'
+import styled from 'styled-components';
 
+const SearchBarDiv = styled.div `
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;`
+
+const LeftSearchBar = styled.div `
+  display: flex; `
+
+const Camera = styled.i `
+  font-size: 23px;
+  margin: 15px 0 0px 10px;
+  border-right: 1px solid black;
+  padding-right: 5px;`
+
+const IgLogo = styled.img `
+  width: 100px;
+  height: 45px;
+  margin: 5px;`
+
+const CenterSearchBar = styled.div `
+  margin-top: 18px;`
+
+const SearchInputBox = styled.input `
+  text-align: center;`
+
+const RightSearchBar = styled.div `
+  margin-top: 18px;`
+
+const SearchBarIcons = styled.i `
+  margin-right: 18px;`
+
+  
 
 function SearchBar() {
   return (
-    <div className='SearchBarDiv'>
-      <div className='LeftSearchBar'>
+    <SearchBarDiv>
+      <LeftSearchBar>
         <div>
-          <i className="camera fas fa-camera-retro"></i>
+          <Camera className="fas fa-camera-retro"></Camera>
         </div>
-        <img src="https://techcrunch.com/wp-content/uploads/2014/06/instagram_topic.png?w=600" alt="instagram" />
-      </div>
-      <div className='CenterSearchBar'>
-        <input 
+        <IgLogo src="https://techcrunch.com/wp-content/uploads/2014/06/instagram_topic.png?w=600" alt="instagram" />
+      </LeftSearchBar>
+      <CenterSearchBar>
+        <SearchInputBox 
           name="search-input" 
           type="text" 
           placeholder="Search">
-        </input>
-      </div>
-      <div className='RightSearchBar'>
-        <i className="search-bar-icons far fa-compass"></i>
-        <i className="search-bar-icons far fa-heart"></i>
-        <i className="search-bar-icons far fa-user"></i>
-      </div>
-    </div>
+        </SearchInputBox>
+      </CenterSearchBar>
+      <RightSearchBar>
+        <SearchBarIcons className="far fa-compass"></SearchBarIcons>
+        <SearchBarIcons className="far fa-heart"></SearchBarIcons>
+        <SearchBarIcons className="far fa-user"></SearchBarIcons>
+      </RightSearchBar>
+    </SearchBarDiv>
   );
 }
 
