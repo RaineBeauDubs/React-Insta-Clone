@@ -26,7 +26,7 @@ function Post(props) {
         <PostThumbnail src={props.insta.thumbnailUrl} alt="thumbnail" />
         <PostUsername>{props.insta.username}</PostUsername>
       </PostHeader>
-      <PostPic src={props.insta.imageURL} alt="Post" />
+      <PostPic src={props.insta.imageUrl} alt="Post" />
       <PostTimestamp>{props.insta.timestamp}</PostTimestamp>
     </PostContainerDiv>
   )
