@@ -7,7 +7,9 @@ const AppWrapper = styled.div`
   width: 100%;
   text-align: center;
   content-align: center;
-  margin: auto;`
+  margin: auto;
+  background: lightgrey;
+  padding-top: 60px;`
 
 const App = Authenticate (
   class App extends Component {

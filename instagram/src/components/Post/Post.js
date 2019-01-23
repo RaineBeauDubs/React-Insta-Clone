@@ -7,7 +7,8 @@ const PostContainerDiv = styled.div `
   border: 1px solid lightgrey
   width: 500px;
   margin: auto;
-  margin-top: 80px;`
+  background: white;
+  margin-bottom: 20px;`
 
 const PostHeader = styled.div `
   display: flex;`
