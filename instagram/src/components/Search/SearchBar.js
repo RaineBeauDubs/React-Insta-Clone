@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logout from './Logout';
 
 const SearchBarDiv = styled.div `
   border-bottom: 1px solid lightgrey;
@@ -41,10 +42,7 @@ const SearchBarIcons = styled.i `
 
 function SearchBar(props) {
 
-  // handleLogout = event => {
-  //   localStorage.clear('user');
-  //   window.location.reload();
-  // }
+
 
   return (
     <SearchBarDiv>
@@ -64,7 +62,8 @@ function SearchBar(props) {
       <RightSearchBar>
         <SearchBarIcons className="far fa-compass"></SearchBarIcons>
         <SearchBarIcons className="far fa-heart"></SearchBarIcons>
-        <SearchBarIcons className="far fa-user"></SearchBarIcons>
+        <Logout />
+        {/* <SearchBarIcons className="far fa-user"></SearchBarIcons> */}
       </RightSearchBar>
     </SearchBarDiv>
   );
