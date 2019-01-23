@@ -39,7 +39,7 @@ const SearchBarIcons = styled.i `
 
 
 
-function SearchBar() {
+function SearchBar(props) {
   return (
     <SearchBarDiv>
       <LeftSearchBar>
@@ -50,10 +50,12 @@ function SearchBar() {
       </LeftSearchBar>
       <CenterSearchBar>
         <SearchInputBox 
-          name="search-input" 
+          name="input-search" 
           type="text" 
-          placeholder="Search">
-        </SearchInputBox>
+          placeholder="Search"
+          value={props.searchString}
+          onChange={props.handleSearchInput} 
+        />
       </CenterSearchBar>
       <RightSearchBar>
         <SearchBarIcons className="far fa-compass"></SearchBarIcons>

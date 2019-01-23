@@ -1,11 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const CommentEntirety = styled.div `
+  display: flex;
+  margin: 0 15px 10px 15px;`
+
+const CommentUsername = styled.span `
+  font-weight: bold;
+  margin-right: 3px;`
 
 function Comment(props) {
   return (
-    <div>
-      <p>{props.comment.username}</p>
-      <p>{props.comment.text}</p>
-    </div>
+    <CommentEntirety>
+      <CommentUsername>{props.comment.username}</CommentUsername>
+      <span>{props.comment.text}</span>
+    </CommentEntirety>
   );
 }
 

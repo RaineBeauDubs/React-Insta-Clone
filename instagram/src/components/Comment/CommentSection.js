@@ -4,13 +4,21 @@ import styled from 'styled-components';
 import CommentInput from './CommentInput';
 
 const CommentSectionDiv = styled.div `
-  font-size: 20px;`
+  font-size: 20px;
+  text-align: left;
+  font-size: 15px;`
 
 const CommentIcons = styled.div `
-  display: flex;`
+  display: flex;
+  margin-top: 10px;`
 
 const CommentIcon = styled.i `
-  font-size: 20px;`
+  font-size: 20px;
+  margin-left: 15px;`
+
+const LikeDisplay = styled.p `
+  font-size: 12px;
+  margin-left: 15px;`
 
 
 class CommentSection extends Component {
@@ -67,7 +75,7 @@ class CommentSection extends Component {
           <CommentIcon className="far fa-heart" onClick={this.incrementLikes}></CommentIcon>
           <CommentIcon className="far fa-comment"></CommentIcon>
         </CommentIcons>
-        <p>{this.state.likes} likes</p>
+        <LikeDisplay>{this.state.likes} likes</LikeDisplay>
         {this.state.comments.map((comment, i) => 
           <Comment 
             key={i} 

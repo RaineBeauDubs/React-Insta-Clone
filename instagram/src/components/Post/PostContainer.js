@@ -5,7 +5,15 @@ import styled from 'styled-components';
 const PostContainerWrapper = styled.ul `
   padding-left: 0;`
 
-function PostContainer(props) {
+const PostContainer = props => {
+  let insta = props.insta;
+  let search = props.searchString;
+
+  if(search === '') {
+    insta = insta.filter(user =>
+      user.username.toLowerCase().match(search));
+  }
+
   return (
     <PostContainerWrapper>
       {props.instas.map(insta => {

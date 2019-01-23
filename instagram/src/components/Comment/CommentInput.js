@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CommentInputForm = styled.form `
-  text-align: center;`
+  content-align: left;
+  margin: 15px;`
 
 const CommentInputInput = styled.input `
-  font-size: 20px;`
+  font-size: 20px;
+  `
 
 const CommentInput = props => {
   return(
