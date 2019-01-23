@@ -1,21 +1,43 @@
-import React from 'react';
-import PostContainer from './PostContainer';
-import SearchBar from '../Search/SearchBar';
+import React, { Component } from "react";
+import PostContainer from "./PostContainer";
+import SearchBar from "../Search/SearchBar";
+import dummyData from "../../dummy-data.js";
 
-function PostPage(props) {
-  return (
-    <div>
-      <SearchBar
-        searchString={props.searchString}
-        handleSearchInput={props.handleSearchInput}
-      />
-      <PostContainer
-        searchString={props.searchString}
-        insta={props.dataSearchResults}
-        instas={props.dummyPosts}
-      />
-    </div>
-  );
+class PostPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dummyPosts: [],
+      dataSearchResults: []
+    };
+  }
+  componentDidMount() {
+    this.setState({ dummyPosts: dummyData });
+  }
+
+  searchPosts = e => {
+    const dummyPosts = this.state.dummyPosts.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ dataSearchResults: dummyPosts });
+  };
+
+  render() {
+    return (
+      <div>
+        <SearchBar search={this.searchPosts} />
+        <PostContainer
+          posts={
+            this.state.dataSearchResults.length > 0
+              ? this.state.dataSearchResults
+              : this.state.dummyPosts
+          }
+        />
+      </div>
+    );
+  }
 }
 
 export default PostPage;

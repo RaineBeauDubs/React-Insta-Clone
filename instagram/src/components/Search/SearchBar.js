@@ -49,12 +49,10 @@ function SearchBar(props) {
         <IgLogo src="https://techcrunch.com/wp-content/uploads/2014/06/instagram_topic.png?w=600" alt="instagram" />
       </LeftSearchBar>
       <CenterSearchBar>
-        <SearchInputBox 
-          name="input-search" 
-          type="text" 
+        <SearchInputBox
+          type="text"
           placeholder="Search"
-          value={props.searchString}
-          onChange={props.handleSearchInput} 
+          onKeyDown={props.search}
         />
       </CenterSearchBar>
       <RightSearchBar>
