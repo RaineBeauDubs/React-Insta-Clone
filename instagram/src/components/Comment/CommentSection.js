@@ -3,6 +3,7 @@ import Comment from './Comment';
 import styled from 'styled-components';
 import CommentInput from './CommentInput';
 
+
 const CommentSectionDiv = styled.div `
   font-size: 20px;
   text-align: left;
@@ -27,7 +28,8 @@ class CommentSection extends Component {
     this.state = {
       comments: props.comments,
       likes: props.likes,
-      comment: ''
+      comment: '',
+      username: props.username,
     };
   }
 
@@ -41,7 +43,7 @@ class CommentSection extends Component {
 
   addNewComment = event => {
     event.preventDefault();
-    const newComment = { text: this.state.comment, username: 'rainebeaudubs' };
+    const newComment = { text: this.state.comment, username: 'rainebeaudubs'};
     const comments = [...this.state.comments];
     comments.push(newComment);
     this.setState({ comments, comment: '' });

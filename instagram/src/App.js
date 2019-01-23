@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import PostPage from './components/Post/PostPage';
+import Authenticate from './components/Authenticate/Authenticate';
 import styled from 'styled-components';
-import './App.css';
 
-const AppWrapper = styled.div `
+const AppWrapper = styled.div`
   width: 100%;
   text-align: center;
   content-align: center;
   margin: auto;`
 
-class App extends Component {
-  constructor() {
-    super(); 
-    this.state = {};
-  }
+const App = Authenticate (
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
 
-  render() {
-    return (
-      <AppWrapper>
-        <PostPage />
-      </AppWrapper>
-    );
+    render() {
+      return (
+        <AppWrapper>
+          <PostPage />
+        </AppWrapper>
+      );
+    }
   }
-}
+)
 
-export default App;
+export default Authenticate(App);

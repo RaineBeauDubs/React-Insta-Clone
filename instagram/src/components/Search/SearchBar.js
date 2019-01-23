@@ -40,6 +40,12 @@ const SearchBarIcons = styled.i `
 
 
 function SearchBar(props) {
+
+  // handleLogout = event => {
+  //   localStorage.clear('user');
+  //   window.location.reload();
+  // }
+
   return (
     <SearchBarDiv>
       <LeftSearchBar>
