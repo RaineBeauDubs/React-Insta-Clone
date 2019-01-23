@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const LogoutButtonDiv = styled.div `
+  display: inline-flex;
+  margin-right: 10px;`
+
 
 class Logout extends Component {
   constructor() {
@@ -13,9 +19,9 @@ class Logout extends Component {
 
   render() {
     return (
-      <div>
+      <LogoutButtonDiv>
         <i onClick={this.handleLogout} className="far fa-user"></i>
-      </div>
+      </LogoutButtonDiv>
     )
   }
 
