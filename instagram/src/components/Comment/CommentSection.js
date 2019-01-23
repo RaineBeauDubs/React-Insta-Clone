@@ -43,7 +43,7 @@ class CommentSection extends Component {
 
   addNewComment = event => {
     event.preventDefault();
-    const newComment = { text: this.state.comment, username: 'rainebeaudubs'};
+    const newComment = { text: this.state.comment, username: 'RaineBeauDubs'};
     const comments = [...this.state.comments];
     comments.push(newComment);
     this.setState({ comments, comment: '' });
